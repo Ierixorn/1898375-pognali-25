@@ -2,11 +2,10 @@
   background-color: @seven-background-color;
 }
 
-.filters-section__button-wrapper {
+.filters-section__menu-wrapper {
   width: 320px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -19,13 +18,66 @@
   }
 }
 
+.filters-section__content-wrapper {
+  .mixin-phone-container();
+  padding-top: 23px;
+  padding-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    .mixin-table-container();
+  }
+
+  @media (min-width: @desktop-width) {
+    .mixin-desktop-container();
+  }
+}
+
 .filters-section__toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: none;
+  background-color: @seven-background-color;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+  }
+}
+
+.filters-section__content-wrapper--menu-close .filters-section__toggle {
+  &::before {
+    content: "";
+    display: block;
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    width: 15px;
+    height: 10px;
+    background-image: url("/img/icons/country-filter-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: @second-background-color;
+    box-shadow:
+      8px 0 0 0 @second-background-color,
+      16px 0 0 0 @second-background-color;
   }
 }
 

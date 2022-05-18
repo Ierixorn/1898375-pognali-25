@@ -1,9 +1,9 @@
 let mainHead = document.querySelector('.main-header');
 let navMain = document.querySelector('.main-navigation');
 let navToggle = document.querySelector('.main-navigation__toggle');
-let mainIndex = document.querySelector('.main-index');
+let mainIndex = document.querySelector('.across-pages-main');
 
-mainIndex.classList.remove('main-index--nojs');
+mainIndex.classList.remove('across-pages-main--nojs');
 mainHead.classList.remove('main-header--nojs');
 navMain.classList.remove('main-navigation--nojs');
 
