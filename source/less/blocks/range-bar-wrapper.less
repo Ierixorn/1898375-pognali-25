@@ -1,0 +1,47 @@
+.range-bar-wrapper__range-scale-wrapper {
+  width: 220px;
+  height: 2px;
+  position: relative;
+  background-color: fade(@fifth-background-color, 20%);
+  cursor: pointer;
+}
+
+.range-bar-wrapper__range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: @fifth-background-color;
+  cursor: pointer;
+}
+
+.range-bar-wrapper__toggle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border-width: 0;
+  background-color: @fifth-background-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    outline: 4px solid @fifth-background-color;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.range-bar-wrapper__toggle-min {
+  top: -5.5px;
+  left: -4px;
+}
+
+.range-bar-wrapper__toggle-max {
+  top: -5.5px;
+  left: 129px;
+}

@@ -1,6 +1,7 @@
 
 .companion-filters__wrapper {
   .mixin-phone-container();
+  padding-top: 21px;
 
   @media (min-width: @tablet-width) {
     .mixin-table-container();
@@ -13,9 +14,10 @@
   }
 }
 
-.companion-filters__companion-filters {
+.companion-filters__companion-filters-form {
   display: flex;
   flex-direction: column;
+  padding: 0 25px;
   border-radius: 20px;
   background-color: @eighth-background-color;
 
@@ -26,4 +28,14 @@
   @media (min-width: @desktop-width) {
     width: 285px;
   }
+}
+
+.companion-filters__title {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.companion-filters__submit-button {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }

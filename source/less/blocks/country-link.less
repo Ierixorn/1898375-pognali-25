@@ -1,4 +1,12 @@
 .country-link {
   text-decoration: none;
-  color: #444444;
+  color: @fourth-text-color;
+
+  &:hover {
+    color: fade(@fourth-text-color, 30%);
+  }
+
+  &:active {
+    color: @eleven-text-color;
+  }
 }

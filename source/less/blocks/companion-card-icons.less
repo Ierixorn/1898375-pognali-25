@@ -1,0 +1,31 @@
+.companion-card-icons__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    left: -25px;
+    background-color: @third-background-color;
+  }
+
+  &::after {
+    content: "";
+    width: 92px;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: -109px;
+    background-color: @third-background-color;
+  }
+}
+
+
+.companion-card-icons__icons-list {
+  .mixin-list-normalize();
+  display: flex;
+  margin-bottom: 5px;
+}

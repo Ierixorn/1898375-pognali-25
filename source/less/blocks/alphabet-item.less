@@ -1,3 +1,9 @@
+.alphabet-item {
+  display: inline-block;
+  outline: 1px solid @ten-background-color;
+}
+
+
 .alphabet-item__list {
   display: none;
 
@@ -11,10 +17,13 @@
 }
 
 .alphabet-item__letter {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 43px;
   height: 40px;
   box-sizing: border-box;
+  outline: 1px solid @ten-background-color;
 
   @media (min-width: @desktop-width) {
     width: 48px;

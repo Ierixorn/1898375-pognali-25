@@ -1,0 +1,29 @@
+.filters-collapse-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 11px;
+    width: 14px;
+    height: 14px;
+    background-image: url("/img/icons/close-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    background-color: @twenty-six-background-color;
+  }
+
+  &:active {
+    background-color: fade(@twenty-six-background-color, 30%);
+    color: fade(@nine-text-color, 30%);
+  }
+
+  &:active::before {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(9%) saturate(708%) hue-rotate(192deg) brightness(86%) contrast(96%);
+  }
+}

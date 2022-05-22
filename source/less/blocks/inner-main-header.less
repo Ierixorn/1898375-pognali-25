@@ -3,5 +3,25 @@
 }
 
 .inner-main-header__title {
+  position: relative;
   margin: 0;
+
+  &::before {
+    content: "";
+    width: 175px;
+    height: 5px;
+    position: absolute;
+    top: 151%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: @nine-background-color;
+
+    @media (min-width: @tablet-width) {
+      width: 288px;
+      height: 8px;
+      top: 225%;
+      left: 49%;
+    }
+  }
 }

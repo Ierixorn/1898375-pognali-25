@@ -1,0 +1,59 @@
+.transport-list {
+  margin-bottom: 20px;
+}
+
+.companion-fieldset--filter-close .transport-list {
+  display: none;
+}
+
+.companion-fieldset--filter-open .transport-list {
+  display: flex;
+}
+
+.transport-list__name:not(:last-of-type) {
+  margin-right: 2px;
+}
+
+.transport-list__label {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: @primary-background-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-image: url("/img/icons/plane-icon.svg");
+    filter: brightness(0) saturate(100%) invert(94%) sepia(12%) saturate(82%) hue-rotate(183deg) brightness(91%) contrast(101%);
+  }
+}
+
+.transport-list__name:nth-of-type(2) .transport-list__label::after {
+  background-image: url("/img/icons/bus-icon.svg");
+}
+
+.transport-list__name:nth-of-type(3) .transport-list__label::after {
+  background-image: url("/img/icons/bicycle-icon.svg");
+  background-size: cover;
+}
+
+.transport-list__name:nth-of-type(4) .transport-list__label::after {
+  background-image: url("/img/icons/run-man-icon.svg");
+}
+
+.fieldset-list__input:checked + .transport-list__label::after {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(12%) saturate(6904%) hue-rotate(202deg) brightness(94%) contrast(92%);
+}

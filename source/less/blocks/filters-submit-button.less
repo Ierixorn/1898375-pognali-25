@@ -1,0 +1,20 @@
+.filters-submit-button {
+  .mixin-font-family-normal();
+  color: @second-text-color;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  background-color: @primary-background-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+
+  &:hover {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+  }
+
+  &:active {
+    background-color: @eighth-background-color;
+  }
+}

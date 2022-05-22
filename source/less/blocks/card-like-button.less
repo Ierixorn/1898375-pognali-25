@@ -1,0 +1,37 @@
+.card-like-button--off {
+  color: @thirty-four-background-color;
+
+  &:hover {
+    background-color: @seven-background-color;
+    color: @thirty-five-background-color;
+  }
+
+  &:active .card-like-button__heart-icon {
+    color: @thirty-one-background-color;
+  }
+}
+
+.card-like-button__heart-icon-fill {
+  display: none;
+}
+
+.card-like-button--active .card-like-button__heart-icon {
+  display: none;
+}
+
+.card-like-button--active .card-like-button__heart-icon-fill {
+  display: block;
+}
+
+.card-like-button--active {
+  background-color: @thirty-background-color;
+  color: @thirty-three-background-color;
+
+  &:hover {
+    background-color: @thirty-two-background-color;
+  }
+
+  &:active .card-like-button__heart-icon-fill {
+    color: fade(@thirty-three-background-color, 30%);
+  }
+}

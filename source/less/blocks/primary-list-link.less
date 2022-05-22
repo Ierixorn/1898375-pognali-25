@@ -5,5 +5,22 @@
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #192144;
+  color: fade(@nine-text-color, 30%);
+
+  &:hover {
+    color: @nine-text-color;
+  }
+
+  &:active {
+    color: @nine-text-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.primary-list-link--selected {
+  color: @nine-text-color;
 }

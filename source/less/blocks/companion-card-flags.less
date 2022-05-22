@@ -1,0 +1,28 @@
+.companion-card-flags__title {
+  margin: 0;
+  margin-bottom: 19px;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    left: -25px;
+    background-color: @third-background-color;
+  }
+
+  &::after {
+    content: "";
+    width: 149px;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: -158px;
+    background-color: @third-background-color;
+  }
+}
+
+.companion-card-flags__list {
+  .mixin-list-normalize();
+}
