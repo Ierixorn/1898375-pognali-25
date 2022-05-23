@@ -1,3 +1,21 @@
 .profile-link {
   text-decoration: none;
+
+  ::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 8px;
+    left: 130px;
+    border-radius: 50%;
+    background-color: @thirty-seven-background-color;
+  }
+}
+
+.profile-link--online {
+  ::after {
+    background-color: @thirty-nine-background-color;
+  }
 }

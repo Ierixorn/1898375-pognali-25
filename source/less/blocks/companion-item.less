@@ -4,6 +4,7 @@
 
 .companion-item__item-wrapper {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   padding-top: 14px;
@@ -12,7 +13,15 @@
   padding-left: 18px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 95px 95px 128px 128px 60px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+      "companion-item__big-profile-link companion-item__big-profile-link companion-item__profile-link companion-item__profile-link companion-item__icons-and-level-wrapper"
+      "companion-item__big-profile-link companion-item__big-profile-link companion-item__tags-cloud companion-item__tags-cloud companion-item__icons-and-level-wrapper"
+      "companion-item__big-profile-link companion-item__big-profile-link companion-item__call-button companion-item__like-button-wrapper companion-item__icons-and-level-wrapper"
+      "companion-item__flags-wrapper companion-item__flags-wrapper companion-item__flags-wrapper companion-item__flags-wrapper companion-item__flags-wrapper";
     padding-top: 35px;
     padding-right: 25px;
     padding-bottom: 26px;
@@ -20,13 +29,34 @@
   }
 }
 
+.companion-item__big-profile-link {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    grid-area: companion-item__big-profile-link;
+  }
+}
+
+.companion-item__big-image {
+  border-radius: 20px;
+}
+
 .companion-item__profile-link {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    grid-area: companion-item__profile-link;
+  }
 }
 
 .companion-item__image {
   order: 1;
   margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .companion-item__title {
@@ -40,6 +70,10 @@
   margin-top: -28px;
   margin-left: 50px;
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: companion-item__like-button-wrapper;
+  }
 }
 
 .companion-item__like-button {
@@ -56,11 +90,19 @@
 .companion-item__tags-cloud {
   margin-bottom: 16px;
   margin-left: 7px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: companion-item__tags-cloud;
+  }
 }
 
 .companion-item__flags-wrapper {
   margin-bottom: 12px;
   margin-left: 7px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: companion-item__flags-wrapper;
+  }
 }
 
 .companion-item__icons-and-level-wrapper {
@@ -68,6 +110,13 @@
   align-items: center;
   margin-left: 7px;
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    grid-area: companion-item__icons-and-level-wrapper;
+  }
 }
 
 .companion-item__icons-wrapper {
@@ -78,4 +127,8 @@
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 25px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: companion-item__call-button;
+  }
 }
