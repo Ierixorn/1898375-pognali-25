@@ -3,17 +3,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  color: #1d2e5b;
+  color: @six-text-color;
   text-decoration: none;
   text-transform: uppercase;
   background-color: @primary-background-color;
-
-  @media (min-width: @tablet-width) {
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 60px;
-    background-color: @seven-background-color;
-  }
 
   &:hover {
     background-color: @fifth-background-color;
@@ -24,10 +17,33 @@
     background-color: @fifth-background-color;
     color: @primary-text-color;
   }
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    color: fade(@second-background-color, 30%);
+    background-color: @seven-background-color;
+
+    &:hover {
+      color: @second-background-color;
+      background-color: @seven-background-color;
+    }
+
+    &:active {
+      color: fade(@second-background-color, 60%);
+      background-color: @seven-background-color;
+    }
+  }
 }
 
 
 .alphabet-letter--selected {
   color: @primary-text-color;
   background-color: @fifth-background-color;
+
+  @media (min-width: @tablet-width) {
+    color: @second-background-color;
+    background-color: @seven-background-color;
+  }
 }

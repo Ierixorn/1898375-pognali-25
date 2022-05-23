@@ -4,6 +4,11 @@
 
 .companion-fieldset--filter-open .fieldset-list {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 163px);
+  }
 }
 
 .fieldset-list__label {
@@ -29,14 +34,12 @@
 
   &::after {
     content: "";
-    width: 9px;
-    height: 9px;
+    width: 18px;
+    height: 18px;
     position: absolute;
-    top: 26%;
-    left: 4.5%;
-    transform: translate(-50%, -50%);
     background-image: url("/img/icons/input-selected-icon.svg");
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &:hover {
@@ -45,6 +48,25 @@
 
   &:active {
     color: fade(@thirteen-text-color, 60%);
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 0;
+    }
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 0;
+      background-size: 11px 11px;
+    }
   }
 }
 

@@ -4,6 +4,10 @@
   position: relative;
   background-color: fade(@fifth-background-color, 20%);
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 283px;
+  }
 }
 
 .range-bar-wrapper__range-bar {
@@ -11,6 +15,11 @@
   height: 2px;
   background-color: @fifth-background-color;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: 149px;
+    width: 138px;
+  }
 }
 
 .range-bar-wrapper__toggle {

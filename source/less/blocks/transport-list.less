@@ -1,5 +1,9 @@
 .transport-list {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .companion-fieldset--filter-close .transport-list {
@@ -38,6 +42,19 @@
     background-repeat: no-repeat;
     background-image: url("/img/icons/plane-icon.svg");
     filter: brightness(0) saturate(100%) invert(94%) sepia(12%) saturate(82%) hue-rotate(183deg) brightness(91%) contrast(101%);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 42px;
+      height: 42px;
+    }
+
+    &::after {
+      width: 23px;
+      height: 23px;
+      background-size: 23px 23px;
+    }
   }
 }
 

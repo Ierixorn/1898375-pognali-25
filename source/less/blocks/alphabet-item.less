@@ -1,6 +1,10 @@
 .alphabet-item {
   display: inline-block;
   outline: 1px solid @ten-background-color;
+
+  @media (min-width: @tablet-width) {
+    outline: none;
+  }
 }
 
 
@@ -24,6 +28,13 @@
   height: 40px;
   box-sizing: border-box;
   outline: 1px solid @ten-background-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    outline: none;
+    margin: 0;
+  }
 
   @media (min-width: @desktop-width) {
     width: 48px;

@@ -1,11 +1,27 @@
 .range-input {
+  .mixin-font-family-normal();
   text-align: center;
   outline: none;
   appearance: none;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .range-input::-webkit-inner-spin-button,
 .range-input::-webkit-outer-spin-button {
-  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
