@@ -5,7 +5,33 @@
   line-height: 24px;
   color: @second-text-color;
 
-  @media (min-width: @desktop-width) {
-    color: @primary-text-color;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.level-number__text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: fade(@fifteen-text-color, 40%);
+
+    &::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: fade(@fifteen-text-color, 10%);
+    }
   }
 }

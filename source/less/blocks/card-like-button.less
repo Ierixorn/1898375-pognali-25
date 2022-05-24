@@ -11,8 +11,20 @@
   }
 }
 
+.card-like-button__heart-icon {
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 18px;
+  }
+}
+
 .card-like-button__heart-icon-fill {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 18px;
+  }
 }
 
 .card-like-button--active .card-like-button__heart-icon {
@@ -21,6 +33,11 @@
 
 .card-like-button--active .card-like-button__heart-icon-fill {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 18px;
+  }
 }
 
 .card-like-button--active {

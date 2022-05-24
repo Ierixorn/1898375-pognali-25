@@ -12,6 +12,16 @@
     border-radius: 50%;
     background-color: @thirty-seven-background-color;
   }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+
+    ::after {
+      position: static;
+      margin-left: 22px;
+      margin-top: 14px;
+    }
+  }
 }
 
 .profile-link--online {
