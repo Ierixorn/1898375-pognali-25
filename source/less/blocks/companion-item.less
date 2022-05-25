@@ -14,8 +14,8 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto 105px auto;
+    grid-template-rows: auto auto auto auto;
     gap: 0 0;
     grid-template-areas:
       "companion-item__big-profile-link companion-item__big-profile-link companion-item__profile-link companion-item__profile-link companion-item__icons-and-level-wrapper"
@@ -79,9 +79,10 @@
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    align-self: flex-start;
     margin: 0;
     grid-area: companion-item__like-button-wrapper;
+    align-self: flex-end;
+    margin-left: 48px;
   }
 }
 
@@ -119,6 +120,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    margin-top: 22px;
     grid-area: companion-item__flags-wrapper;
   }
 }
@@ -131,9 +133,8 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
+    margin-left: auto;
     grid-area: companion-item__icons-and-level-wrapper;
   }
 }
@@ -142,7 +143,7 @@
   margin-right: 49px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin-right: 0;
   }
 }
 
@@ -156,5 +157,6 @@
     height: 50px;
     padding: 0;
     grid-area: companion-item__call-button;
+    align-self: flex-end;
   }
 }

@@ -23,7 +23,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin-left: 49px;
+
+    &::before {
+      width: 65px;
+      top: 9px;
+      left: -86px;
+    }
+
+    &::after {
+      width: 496px;
+      top: 60.5%;
+      right: -49%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
